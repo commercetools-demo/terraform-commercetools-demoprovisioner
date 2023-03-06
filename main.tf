@@ -22,8 +22,8 @@ provider "commercetools" {
 module "realms" {
   source   = "./modules/realms"
 }
-/*
+
 output "config" {
   value = module.realms.config
 }
-*/
+
