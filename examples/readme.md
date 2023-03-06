@@ -1,5 +1,7 @@
 # commercetools demoprovisioner
 
+![logo](logo.jpg)
+
 This module uses a config file to create a standardized demo environment. For now only for EMEA based setups. The module is using the fantastic [Lab Digital commercetools provider](https://registry.terraform.io/providers/labd/commercetools/latest)
 
 ***Pre requisites:***
