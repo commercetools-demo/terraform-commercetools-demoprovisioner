@@ -1,0 +1,255 @@
+labels:
+  supplychannellabel: "warehouse"
+  distributionchannellabel: "distribution"
+realms: # the list of countries, languages and currencies that we need in this project
+  - realm: #----------------------------- 🇬🇧 Great Brittany 🇬🇧 ---
+    name: "Great Britain"
+    key: "great-britain"
+    countrycode: "GB"
+    languages: 
+      - "en-GB"
+    currencies:
+      - "GBP"
+    tax:
+      - rate:
+        category: "standard"
+        name: "vat-standard"
+        pct: 0.22
+      - rate:
+        category: "reduced-high"
+        name: "vat-reduced"
+        pct: 0.6
+      - rate:
+        category: "zero"
+        name: "vat-zero"
+        pct: 0.0
+  - realm: #----------------------------- 🇳🇱 The Netherlands 🇳🇱 ---
+    name: "The Netherlands"
+    key: "the-netherlands"
+    countrycode: "NL"
+    languages: 
+      - "nl-NL"
+    currencies:
+      - "EUR"
+    tax:
+      - rate:
+        category: "standard"
+        name: "btw-standard"
+        pct: 0.21
+      - rate:
+        category: "reduced-high"
+        name: "btw-verlaagd"
+        pct: 0.6
+  - realm: #----------------------------- 🇩🇪 Germany 🇩🇪 ---
+    name: "Germany"
+    key: "germany"
+    countrycode: "DE"
+    languages: 
+      - "de-DE"
+    currencies:
+      - "EUR"
+    tax:
+      - rate:
+        category: "standard"
+        name: "Mehrwertsteuer"
+        pct: 0.19
+      - rate:
+        category: "reduced-high"
+        name: "reduzierte MwSt"
+        pct: 0.7
+      - rate:
+        category: "zero"
+        name: "keine Umsatzsteuer"
+        pct: 0.0
+  - realm: #----------------------------- 🇫🇷 France 🇫🇷  ---
+    name: "France"
+    key: "france"
+    countrycode: "FR"
+    languages: 
+      - "fr-FR"
+    currencies:
+      - "EUR"
+    tax:
+      - rate:
+        category: "standard"
+        name: "vat-standard"
+        pct: 0.20
+      - rate:
+        category: "reduced-high"
+        name: "reduced"
+        pct: 0.10
+      - rate:
+        category: "reduced-low"
+        name: "Super Reduced"
+        pct: 0.055
+      - rate:
+        category: "special"
+        name: "Special"
+        pct: 0.021
+      - rate:
+        category: "zero"
+        name: "vat-zero"
+        pct: 0.0
+  - realm: #----------------------------- 🇮🇹 Italy 🇮🇹 ---
+    name: "Italy"
+    key: "italy"
+    countrycode: "IT"
+    languages: 
+      - "it-IT"
+    currencies:
+      - "EUR"
+    tax:
+      - rate:
+        category: "standard"
+        name: "vat-standard"
+        pct: 0.22
+      - rate:
+        category: "reduced-high"
+        name: "vat-reduced"
+        pct: 0.6
+      - rate:
+        category: "zero"
+        name: "vat-zero"
+        pct: 0.0
+  - realm: #----------------------------- 🇪🇸 Spain 🇪🇸 ---
+    name: "Spain"
+    key: "spain"
+    countrycode: "ES"
+    languages: 
+      - "es-ES"
+    currencies:
+      - "EUR"
+    tax:
+      - rate:
+        category: "standard"
+        name: "vat-standard"
+        pct: 0.21
+      - rate:
+        category: "reduced-high"
+        name: "vat-reduced"
+        pct: 0.10
+      - rate:
+        category: "reduced-low"
+        name: "vat-reduced-low"
+        pct: 0.10
+      - rate:
+        category: "zero"
+        name: "vat-zero"
+        pct: 0.0
+  - realm: #----------------------------- 🇵🇹 Portugal 🇵🇹 ---
+    name: "Portugal"
+    key: "portugal"
+    countrycode: "PT"
+    languages: 
+      - "pt-PT"
+    currencies:
+      - "EUR"
+    tax:
+      - rate:
+        category: "standard"
+        name: "standard"
+        pct: 0.23
+      - rate:
+        category: "reduced-high"
+        name: "Intermediate"
+        pct: 0.13
+      - rate:
+        category: "reduced-low"
+        name: "Reduced"
+        pct: 0.6
+      - rate:
+        category: "zero"
+        name: "vat-zero"
+        pct: 0.0
+# these are the standard configured zones
+zones:
+- zone:
+  name: "benelux"
+  countries: ["NL", "BE", "LU"]
+- zone:
+  name: "scandinavia"
+  countries: ["NO", "SE", "FI", "DK"]
+- zone:
+  name: "dach"
+  countries: ["DE", "AT", "CH"]
+- zone:
+  name: "iberia"
+  countries: ["ES", "PT"]
+- zone:
+  name: "france"
+  countries: ["FR"]
+- zone:
+  name: "italy"
+  countries: ["IT"]
+- zone:
+  name: "great-britain"
+  countries: ["GB"]
+# these are the standard configured shipping methods, including the zones
+shippingmethods:
+- method:
+  name: "Standard"
+  tax-category: "standard"
+  predicate: ""
+  zones: 
+  - zone: 
+    key: "benelux"
+    rates:
+    - rate:
+      currency: "EUR"
+      normal: 1000
+      free-above: 10000
+    - rate:
+      currency: "GBP"
+      normal: 1100
+      free-above: 10000
+  - zone:
+    key: "scandinavia"
+    rates:
+    - rate:
+      currency: "EUR"
+      normal: 1200
+      free-above: 10000
+    - rate:
+      currency: "GBP"
+      normal: 1300
+      free-above: 10000
+  - zone:
+    key: "dach"
+    rates:
+    - rate:
+      currency: "EUR"
+      normal: 1400
+      free-above: 10000
+    - rate:
+      currency: "GBP"
+      normal: 1500
+      free-above: 10000
+- method: 
+  name: "Fedex"
+  tax-category: "standard"
+  predicate: ""
+  zones:
+  - zone: 
+    key: "great-britain"
+    rates:
+    - rate:
+      currency: "GBP"
+      normal: 1600
+      free-above: 10000
+- method:
+  name: "Post-NL"
+  tax-category: "standard"
+  key: "post-nl-shipping-method"
+  predicate: ""  
+  zones: 
+  - zone: 
+    key: "benelux"
+    rates:
+    - rate:
+      currency: "EUR"
+      normal: 1700
+      free-above: 10000
+    - rate:
+      currency: "GBP"
+      normal: 1800
+      free-above: 10000
