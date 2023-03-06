@@ -23,10 +23,24 @@ module "demoprovisioner" {
 
 ***Expected output after the apply:***
 
-[currencies]: currencies.jpg "currencies"
+## International
 
-[languages]: languages.jpg "languages"
+### Currencies
+![currencies](currencies.jpg)
 
-[countries]: countries.jpg "countries"
+### Languages
+![languages](languages.jpg)
 
-[zones]: zones.jpg "zones"
+### Countries
+![countries](countries.jpg)
+
+### Zones
+![zones](zones.jpg)
+
+## Taxes
+
+## Shipping methods
+
+## Channels
+
+## Stores
