@@ -11,7 +11,7 @@ This module uses a config file to create a standardized demo environment. For no
 
 the ```main.tf``` file should look like this
 
-```javascript
+```hcl
 module "demoprovisioner" {
    source  = "commercetools-demo/demoprovisioner/commercetools"
    version = "1.0.2"
