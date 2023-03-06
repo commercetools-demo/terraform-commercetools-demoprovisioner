@@ -1,32 +1,48 @@
-# terraform-commercetools-demoprovisioner
+# commercetools demoprovisioner
 
+![logo](./examples/logo.jpg)
 
+This module uses a config file to create a standardized demo environment. For now only for EMEA based setups. The module is using the fantastic [Lab Digital commercetools provider](https://registry.terraform.io/providers/labd/commercetools/latest)
 
-This is a project to very quickly start a demo environment from a vanilla setup.
+***Pre requisites:***
+- a ```ct-config.yml``` file like [this](https://raw.githubusercontent.com/commercetools-demo/terraform-commercetools-demoprovisioner/master/ct-config.yml) in the root
+- a ```.env``` file in the root
+- a ```main.tf``` in the root
 
-Just add countries, languages and currencies in the ```ct-config.yml``` file and this terraform module creates:
-- supply channels
-- distribution channels
-- stores
-- tax categories and tax rates
-- product-selections
-- etc and to be determined
+the main.tf file should look like this
 
-```
-Version information: 0.0.5
-```
-
-### dependencies:
-
-
-- ```.env``` file with:
-```
-CTP_PROJECT_KEY=<commercetools project key>
-CTP_CLIENT_SECRET=<your client secret>
-CTP_CLIENT_ID=<your client id>
-CTP_AUTH_URL=<auth url>
-CTP_API_URL=<api url>
-CTP_SCOPES=<scopes>
+```json
+module "demoprovisioner" {
+   source  = "commercetools-demo/demoprovisioner/commercetools"
+   version = "1.0.0"
+}
 ```
 
-- ```ct_config.yml``` the script file to configure the environment
+***usage***
+1. ```terraform init```
+2. ```terraform plan``` to see the expected changes
+3. ```terraform apply``` to apply the changes
+
+***Expected output after the apply:***
+
+## International
+
+### Currencies
+![currencies](./examples/currencies.jpg)
+
+### Languages
+![languages](./examples/languages.jpg)
+
+### Countries
+![countries](./examples/countries.jpg)
+
+### Zones
+![zones](./examples/zones.jpg)
+
+## Taxes
+
+## Shipping methods
+
+## Channels
+
+## Stores
