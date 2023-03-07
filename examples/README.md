@@ -46,22 +46,14 @@ provider "commercetools" {
 
 ## International
 
-### Currencies
-![currencies](https://raw.githubusercontent.com/commercetools-demo/terraform-commercetools-demoprovisioner/master/examples/currencies.jpg)
+![international](https://raw.githubusercontent.com/commercetools-demo/terraform-commercetools-demoprovisioner/master/examples/international.jpg)
 
-### Languages
-![languages](https://raw.githubusercontent.com/commercetools-demo/terraform-commercetools-demoprovisioner/master/examples/languages.jpg)
-
-### Countries
-![countries](https://raw.githubusercontent.com/commercetools-demo/terraform-commercetools-demoprovisioner/master/examples/countries.jpg)
-
-### Zones
-![zones](https://raw.githubusercontent.com/commercetools-demo/terraform-commercetools-demoprovisioner/master/examples/zones.jpg)
 
 ## Taxes
-
+![taxes](https://raw.githubusercontent.com/commercetools-demo/terraform-commercetools-demoprovisioner/master/examples/taxes.jpg)
 ## Shipping methods
-
+![shipping](https://raw.githubusercontent.com/commercetools-demo/terraform-commercetools-demoprovisioner/master/examples/shipping.jpg)
 ## Channels
-
+![channels](https://raw.githubusercontent.com/commercetools-demo/terraform-commercetools-demoprovisioner/master/examples/channels.jpg)
 ## Stores
+![stores](https://raw.githubusercontent.com/commercetools-demo/terraform-commercetools-demoprovisioner/master/examples/stores.jpg)
