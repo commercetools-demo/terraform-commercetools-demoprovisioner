@@ -8,6 +8,11 @@ terraform {
   }
 }
 
+variable "configfile" {
+  type = string
+  description = "The file .yml that contains the configuration"
+}
+
 provider "commercetools" {
   client_id     = module.realms.config.client.client_id
   client_secret = module.realms.config.client.client_secret
@@ -21,6 +26,7 @@ provider "commercetools" {
 # setup all realms, realms will deal with channels stores etc
 module "realms" {
   source   = "./modules/realms"
+  configfile = var.configfile
 }
 
 output "config" {
