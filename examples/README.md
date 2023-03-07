@@ -14,6 +14,8 @@ the ```main.tf``` file should look like this
 ```hcl
 module "demoprovisioner" {
    source  = "commercetools-demo/demoprovisioner/commercetools"
+   version = "1.0.7"
+   configfile = "./ct-config.yml"
 }
 
 # register the terraform provider, this needs to happen in the root module
