@@ -25,5 +25,6 @@ module "realms" {
 
 output "config" {
   value = module.realms.config
+  description = "The config object contains the configuration read from the .yml file"
 }
 

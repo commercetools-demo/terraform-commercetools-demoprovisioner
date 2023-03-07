@@ -1,6 +1,13 @@
+
+variable "configfile" {
+   type = string
+   description = "The file .yml that contains the configuration"
+}
+
 # load the config from the default ct-config.yml file
 module "config" {
    source   = "../config"
+   filename = var.configfile
 }
 
 module "Project" {
@@ -65,6 +72,7 @@ module "Shipping" {
 
 output "config" {
    value = module.config
+   description = "the complete configuration read from the config file"
 }
 
 output "realmtax" {
