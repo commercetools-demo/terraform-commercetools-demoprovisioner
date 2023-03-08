@@ -1,12 +1,12 @@
 ---
-page_title: "commercetools demo provisioner"
+page_title: "commercetools demoprovisioner"
 subcategory: ""
 description: |-
   The commercetools demo provisioner is helpful to setup a demo project
 
 ---
 
-# commercetools demo provisioner module
+# demoprovisioner provider
 
 ## Commercial support
 This module is created to formulate a unified demo setup. No commercial support is provided or planned
