@@ -27,6 +27,7 @@ terraform {
    }
 }
 
+
 provider "commercetools" {
    client_id     = module.demoprovisioner.config.client.client_id
    client_secret = module.demoprovisioner.config.client.client_secret
