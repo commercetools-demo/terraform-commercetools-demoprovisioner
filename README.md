@@ -14,7 +14,7 @@ the ```main.tf``` file should look like this
 ```hcl
 module "demoprovisioner" {
    source  = "commercetools-demo/demoprovisioner/commercetools"
-   version = "1.0.7"
+   version = "1.0.7" // see for latest version in github
    configfile = "./ct-config.yml"
 }
 
