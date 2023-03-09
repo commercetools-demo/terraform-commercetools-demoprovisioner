@@ -1,9 +1,9 @@
-# Example for EMEA
+# Example for APAC
 
 ```hcl
 module "demoprovisioner" {
    source  = "commercetools-demo/demoprovisioner/commercetools"
-   configfile = "./ct-config-emea.yml"
+   configfile = "./ct-config-apac.yml"
 }
 
 # register the terraform provider, this needs to happen in the root module
@@ -26,7 +26,7 @@ provider "commercetools" {
 }
 ```
 
-## sample file for EMEA
-<a download="https://raw.githubusercontent.com/commercetools-demo/terraform-commercetools-demoprovisioner/master/examples/EMEA/ct-config-emea.yml" href="https://raw.githubusercontent.com/commercetools-demo/terraform-commercetools-demoprovisioner/master/examples/EMEA/ct-config-emea.yml" title="file">
-    <p>ct-config-emea.yaml</p>
+## sample file for apac
+<a download="https://raw.githubusercontent.com/commercetools-demo/terraform-commercetools-demoprovisioner/master/examples/APAC/ct-config-apac.yml" href="https://raw.githubusercontent.com/commercetools-demo/terraform-commercetools-demoprovisioner/master/examples/APAC/ct-config-apac.yml" title="file">
+    <p>ct-config-apac.yaml</p>
 </a>

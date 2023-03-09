@@ -1,0 +1,66 @@
+labels:
+  supplychannellabel: "warehouse"
+  distributionchannellabel: "distribution"
+realms: # the list of countries, languages and currencies that we need in this project
+  - realm: #----------------------------- 🇺🇸 United States 🇺🇸 ---
+    name: "United States"
+    key: "united-states"
+    countrycode: "US"
+    languages: 
+      - "en-US"
+    currencies:
+      - "USD"
+    tax:
+      - rate:
+        category: "standard"
+        name: "vat-standard"
+        pct: 0.22
+      - rate:
+        category: "reduced-high"
+        name: "vat-reduced"
+        pct: 0.6
+      - rate:
+        category: "zero"
+        name: "vat-zero"
+        pct: 0.0
+  - realm: #----------------------------- 🇨🇦 Canada 🇨🇦 ---
+    name: "Canada"
+    key: "canada"
+    countrycode: "CA"
+    languages: 
+      - "en-CA"
+    currencies:
+      - "CAD"
+    tax:
+      - rate:
+        category: "standard"
+        name: "btw-standard"
+        pct: 0.21
+      - rate:
+        category: "reduced-high"
+        name: "btw-verlaagd"
+        pct: 0.6
+
+# these are the standard configured zones
+zones:
+- zone:
+  name: "northamerica"
+  countries: ["US", "CA"]
+# these are the standard configured shipping methods, including the zones
+shippingmethods:
+- method:
+  name: "Standard"
+  tax-category: "standard"
+  predicate: ""
+  zones: 
+  - zone: 
+    key: "northamerica"
+    rates:
+    - rate:
+      currency: "USD"
+      normal: 1000
+      free-above: 10000
+    - rate:
+      currency: "CAD"
+      normal: 1100
+      free-above: 10000

@@ -1,0 +1,66 @@
+labels:
+  supplychannellabel: "warehouse"
+  distributionchannellabel: "distribution"
+realms: # the list of countries, languages and currencies that we need in this project
+  - realm: #----------------------------- 🇦🇺 Australia 🇦🇺 ---
+    name: "Australia"
+    key: "australia"
+    countrycode: "AU"
+    languages: 
+      - "en-AU"
+    currencies:
+      - "AUD"
+    tax:
+      - rate:
+        category: "standard"
+        name: "vat-standard"
+        pct: 0.22
+      - rate:
+        category: "reduced-high"
+        name: "vat-reduced"
+        pct: 0.6
+      - rate:
+        category: "zero"
+        name: "vat-zero"
+        pct: 0.0
+  - realm: #----------------------------- 🇳🇿 New Zealand 🇳🇿 ---
+    name: "New Zealand"
+    key: "new-zealand"
+    countrycode: "NZ"
+    languages: 
+      - "en-NZ"
+    currencies:
+      - "NZD"
+    tax:
+      - rate:
+        category: "standard"
+        name: "btw-standard"
+        pct: 0.21
+      - rate:
+        category: "reduced-high"
+        name: "btw-verlaagd"
+        pct: 0.6
+
+# these are the standard configured zones
+zones:
+- zone:
+  name: "apac"
+  countries: ["AU", "NZ"]
+# these are the standard configured shipping methods, including the zones
+shippingmethods:
+- method:
+  name: "Standard"
+  tax-category: "standard"
+  predicate: ""
+  zones: 
+  - zone: 
+    key: "apac"
+    rates:
+    - rate:
+      currency: "AUD"
+      normal: 1000
+      free-above: 10000
+    - rate:
+      currency: "NZD"
+      normal: 1100
+      free-above: 10000
