@@ -26,7 +26,4 @@ provider "commercetools" {
 }
 ```
 
-## sample file for EMEA
-<a download="https://raw.githubusercontent.com/commercetools-demo/terraform-commercetools-demoprovisioner/master/examples/EMEA/ct-config-emea.yml" href="https://raw.githubusercontent.com/commercetools-demo/terraform-commercetools-demoprovisioner/master/examples/EMEA/ct-config-emea.yml" title="file">
-    <p>ct-config-emea.yaml</p>
-</a>
+sample [```ct-config.yml```](https://raw.githubusercontent.com/commercetools-demo/terraform-commercetools-demoprovisioner/master/examples/EMEA/ct-config-emea.yml) file for EMEA

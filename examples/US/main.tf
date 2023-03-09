@@ -1,9 +1,6 @@
-# Example for APAC
-
-```hcl
 module "demoprovisioner" {
    source  = "commercetools-demo/demoprovisioner/commercetools"
-   configfile = "./ct-config-apac.yml"
+   configfile = "./ct-config-emea.yml"
 }
 
 # register the terraform provider, this needs to happen in the root module
@@ -24,6 +21,3 @@ provider "commercetools" {
    api_url       = module.demoprovisioner.config.client.api_url
    scopes        = module.demoprovisioner.config.client.scopes
 }
-```
-
-sample [```ct-config.yml```](https://raw.githubusercontent.com/commercetools-demo/terraform-commercetools-demoprovisioner/master/examples/APAC/ct-config-apac.yml) file for APAC
