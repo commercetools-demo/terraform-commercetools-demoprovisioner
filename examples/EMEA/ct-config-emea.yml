@@ -183,7 +183,7 @@ zones:
   countries: ["IT"]
 - zone:
   name: "united-kingdom"
-  countries: ["GB", "XI"]
+  countries: ["GB"]
 # these are the standard configured shipping methods, including the zones
 shippingmethods:
 - method:
@@ -247,7 +247,7 @@ shippingmethods:
       normal: 1500
       free-above: 10000
   - zone:
-    key: "great-britain"
+    key: "united-kingdom"
     rates:
     - rate:
       currency: "EUR"
@@ -274,7 +274,7 @@ shippingmethods:
   predicate: ""
   zones:
   - zone: 
-    key: "great-britain"
+    key: "united-kingdom"
     rates:
     - rate:
       currency: "GBP"
