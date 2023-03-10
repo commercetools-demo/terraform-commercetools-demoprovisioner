@@ -182,8 +182,8 @@ zones:
   name: "italy"
   countries: ["IT"]
 - zone:
-  name: "great-britain"
-  countries: ["GB"]
+  name: "united-kingdom"
+  countries: ["GB", "XI"]
 # these are the standard configured shipping methods, including the zones
 shippingmethods:
 - method:
@@ -215,6 +215,50 @@ shippingmethods:
       free-above: 10000
   - zone:
     key: "dach"
+    rates:
+    - rate:
+      currency: "EUR"
+      normal: 1400
+      free-above: 10000
+    - rate:
+      currency: "GBP"
+      normal: 1500
+      free-above: 10000
+  - zone:
+    key: "france"
+    rates:
+    - rate:
+      currency: "EUR"
+      normal: 1400
+      free-above: 10000
+    - rate:
+      currency: "GBP"
+      normal: 1500
+      free-above: 10000
+  - zone:
+    key: "italy"
+    rates:
+    - rate:
+      currency: "EUR"
+      normal: 1400
+      free-above: 10000
+    - rate:
+      currency: "GBP"
+      normal: 1500
+      free-above: 10000
+  - zone:
+    key: "great-britain"
+    rates:
+    - rate:
+      currency: "EUR"
+      normal: 1400
+      free-above: 10000
+    - rate:
+      currency: "GBP"
+      normal: 1500
+      free-above: 10000
+  - zone:
+    key: "iberia"
     rates:
     - rate:
       currency: "EUR"
