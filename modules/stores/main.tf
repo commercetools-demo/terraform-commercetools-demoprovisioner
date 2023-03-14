@@ -27,7 +27,7 @@ locals{
 
 resource "commercetools_store" "store" {
    name = local.names
-   key = "channel-${var.storesconfig.realm.key}"
+   key = "store-${var.storesconfig.realm.key}"
    languages = var.storesconfig.realm.languages
    distribution_channels = ["distribution-channel-${var.storesconfig.realm.key}"]
    supply_channels = ["supply-channel-${var.storesconfig.realm.key}"]
