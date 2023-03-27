@@ -13,15 +13,15 @@ realms: # the list of countries, languages and currencies that we need in this p
     tax:
       - rate:
         category: "standard"
-        name: "vat-standard"
-        pct: 0.22
+        name: "GST"
+        pct: 0.10
       - rate:
         category: "reduced-high"
-        name: "vat-reduced"
-        pct: 0.6
+        name: "GST-reduced"
+        pct: 0.06
       - rate:
         category: "zero"
-        name: "vat-zero"
+        name: "gst-zero"
         pct: 0.0
   - realm: #----------------------------- 🇳🇿 New Zealand 🇳🇿 ---
     name: "New Zealand"
@@ -34,18 +34,140 @@ realms: # the list of countries, languages and currencies that we need in this p
     tax:
       - rate:
         category: "standard"
-        name: "btw-standard"
-        pct: 0.21
+        name: "GST"
+        pct: 0.15
       - rate:
         category: "reduced-high"
-        name: "btw-verlaagd"
-        pct: 0.6
-
+        name: "GST-reduced"
+        pct: 0.06
+  - realm: #----------------------------- 🇸🇬 Singapore 🇸🇬 ---
+    name: "Singapore"
+    key: "singapore"
+    countrycode: "SG"
+    languages: 
+      - "en"
+    currencies:
+      - "SGD"
+    tax:
+      - rate:
+        category: "standard"
+        name: "GST"
+        pct: 0.08
+      - rate:
+        category: "reduced-high"
+        name: "GST-reduced"
+        pct: 0.06
+  - realm: #----------------------------- 🇹🇭 Thailand 🇹🇭 ---
+    name: "Thailand"
+    key: "thailand"
+    countrycode: "TH"
+    languages: 
+      - "th-TH"
+    currencies:
+      - "THB"
+    tax:
+      - rate:
+        category: "standard"
+        name: "VAT"
+        pct: 0.1
+      - rate:
+        category: "reduced-high"
+        name: "VAT-reduced"
+        pct: 0.07
+  - realm: #----------------------------- 🇻🇳 Vietnam 🇻🇳 ---
+    name: "Vietnam"
+    key: "vietnam"
+    countrycode: "VN"
+    languages: 
+      - "vn-VN"
+    currencies:
+      - "VND"
+    tax:
+      - rate:
+        category: "standard"
+        name: "VAT"
+        pct: 0.1
+      - rate:
+        category: "reduced-high"
+        name: "VAT-reduced"
+        pct: 0.05
+  - realm: #----------------------------- 🇮🇳 India 🇮🇳 ---
+    name: "India"
+    key: "india"
+    countrycode: "IN"
+    languages: 
+      - "id-IN"
+    currencies:
+      - "INR"
+    tax:
+      - rate:
+        category: "standard"
+        name: "VAT"
+        pct: 0.2
+      - rate:
+        category: "reduced-high"
+        name: "VAT-reduced"
+        pct: 0.12
+  - realm: #----------------------------- 🇲🇾 Malaysia 🇲🇾 ---
+    name: "Malaysia"
+    key: "malaysia"
+    countrycode: "MY"
+    languages: 
+      - "my-MS"
+    currencies:
+      - "MYR"
+    tax:
+      - rate:
+        category: "standard"
+        name: "VAT"
+        pct: 0.1
+      - rate:
+        category: "reduced-high"
+        name: "VAT-reduced"
+        pct: 0.05 
+  - realm: #----------------------------- 🇮🇩 Indonesia 🇮🇩 ---
+    name: "Indonesia"
+    key: "indonesia"
+    countrycode: "ID"
+    languages: 
+      - "id-ID"
+    currencies:
+      - "IDR"
+    tax:
+      - rate:
+        category: "standard"
+        name: "VAT"
+        pct: 0.11
+      - rate:
+        category: "reduced-high"
+        name: "VAT-reduced"
+        pct: 0.07                      
 # these are the standard configured zones
 zones:
 - zone:
-  name: "apac"
-  countries: ["AU", "NZ"]
+  name: "australia"
+  countries: ["AU"]
+- zone:
+  name: "new-zealand"
+  countries: ["NZ"]
+- zone:
+  name: "singapore"
+  countries: ["SG"]
+- zone:
+  name: "thailand"
+  countries: ["TH"]
+- zone:
+  name: "vietnam"
+  countries: ["VN"] 
+- zone:
+  name: "india"
+  countries: ["IN"]    
+- zone:
+  name: "malaysia"
+  countries: ["MY"]
+- zone:
+  name: "indonesia"
+  countries: ["ID"]      
 # these are the standard configured shipping methods, including the zones
 shippingmethods:
 - method:
@@ -54,7 +176,7 @@ shippingmethods:
   predicate: ""
   zones: 
   - zone: 
-    key: "apac"
+    key: "australia"
     rates:
     - rate:
       currency: "AUD"
@@ -64,3 +186,188 @@ shippingmethods:
       currency: "NZD"
       normal: 1100
       free-above: 10000
+  - zone: 
+    key: "new-zealand"
+    rates:
+    - rate:
+      currency: "SGD"
+      normal: 1000
+      free-above: 10000     
+  - zone: 
+    key: "thailand"
+    rates:
+    - rate:
+      currency: "THB"
+      normal: 1000
+      free-above: 10000
+  - zone: 
+    key: "singapore"
+    rates:
+    - rate:
+      currency: "SGD"
+      normal: 1000
+      free-above: 10000
+  - zone: 
+    key: "vietnam"
+    rates:
+    - rate:
+      currency: "VND"
+      normal: 100000
+      free-above: 1000000
+  - zone: 
+    key: "india"
+    rates:
+    - rate:
+      currency: "INR"
+      normal: 10000
+      free-above: 100000
+  - zone: 
+    key: "malaysia"
+    rates:
+    - rate:
+      currency: "MYR"
+      normal: 100
+      free-above: 1000
+  - zone: 
+    key: "indonesia"
+    rates:
+    - rate:
+      currency: "IDR"
+      normal: 1000
+      free-above: 10000       
+- method:
+  name: "AustraliaPost"
+  tax-category: "standard"
+  predicate: ""
+  zones: 
+  - zone: 
+    key: "australia"
+    rates:
+    - rate:
+      currency: "AUD"
+      normal: 1000
+      free-above: 10000
+- method:
+  name: "NZ-Post"
+  tax-category: "standard"
+  predicate: ""
+  zones: 
+  - zone: 
+    key: "new-zealand"
+    rates:
+    - rate:
+      currency: "NZD"
+      normal: 900
+      free-above: 10000       
+- method:
+  name: "StarTrack"
+  tax-category: "standard"
+  predicate: ""
+  zones: 
+  - zone: 
+    key: "australia"
+    rates:
+    - rate:
+      currency: "AUD"
+      normal: 800
+      free-above: 10000     
+- method:
+  name: "GrabExpress"
+  tax-category: "standard"
+  predicate: ""
+  zones: 
+  - zone: 
+    key: "singapore"
+    rates:
+    - rate:
+      currency: "SGD"
+      normal: 300
+      free-above: 10000     
+- method:
+  name: "SingPost"
+  tax-category: "standard"
+  predicate: ""
+  zones: 
+  - zone: 
+    key: "singapore"
+    rates:
+    - rate:
+      currency: "SGD"
+      normal: 400
+      free-above: 10000 
+- method:
+  name: "FedEx"
+  tax-category: "standard"
+  predicate: ""
+  zones: 
+  - zone: 
+    key: "thailand"
+    rates:
+    - rate:
+      currency: "THB"
+      normal: 500
+      free-above: 10000 
+  - zone: 
+    key: "vietnam"
+    rates:
+    - rate:
+      currency: "VND"
+      normal: 50000
+      free-above: 1000000
+  - zone: 
+    key: "india"
+    rates:
+    - rate:
+      currency: "INR"
+      normal: 50000
+      free-above: 1000000
+  - zone: 
+    key: "malaysia"
+    rates:
+    - rate:
+      currency: "MYR"
+      normal: 500
+      free-above: 10000        
+  - method:
+    name: "VNPost"
+    tax-category: "standard"
+    predicate: ""
+    zones: 
+    - zone: 
+      key: "vietnam"
+      rates:
+      - rate:
+        currency: "VND"
+        normal: 40000
+        free-above: 1000000
+  - method:
+    name: "DHL"
+    tax-category: "standard"
+    predicate: ""
+    zones: 
+    - zone: 
+      key: "india"
+      rates:
+      - rate:
+        currency: "INR"
+        normal: 40000
+        free-above: 1000000
+    - zone: 
+      key: "malaysia"
+      rates:
+      - rate:
+        currency: "MYR"
+        normal: 400
+        free-above: 1000   
+  - method:
+    name: "GDEX"
+    tax-category: "standard"
+    predicate: ""
+    zones: 
+    - zone: 
+      key: "malaysia"
+      rates:
+      - rate:
+        currency: "MYR"
+        normal: 400
+        free-above: 1000     
