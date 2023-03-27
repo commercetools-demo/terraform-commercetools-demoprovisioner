@@ -1,0 +1,367 @@
+[
+   {
+   "productType": {
+      "typeId": "product-type",
+      "key": "simple"
+   },
+   "name": {
+      "en-GB": "Duck",
+      "nl-NL": "Eend",
+      "de-DE": "Ente",
+      "fr-FR": "Canard",
+      "it-IT": "Anatra",
+      "es-ES": "Pato",
+      "pt-PT": "Pato"
+   },
+   "description": {
+      "en-GB": "Duck",
+      "nl-NL": "Eend",
+      "de-DE": "Ente",
+      "fr-FR": "Canard",
+      "it-IT": "Anatra",
+      "es-ES": "Pato",
+      "pt-PT": "Pato"
+   },
+   "slug": {
+      "en-GB": "duck",
+      "nl-NL": "eend",
+      "de-DE": "ente",
+      "fr-FR": "canard",
+      "it-IT": "anatra",
+      "es-ES": "pato",
+      "pt-PT": "pato"
+   },
+   "metaTitle": {
+      "en-GB": "Duck",
+      "nl-NL": "Eend",
+      "de-DE": "Ente",
+      "fr-FR": "Canard",
+      "it-IT": "Anatra",
+      "es-ES": "Pato",
+      "pt-PT": "Pato"
+   },
+   "metaDescription": {
+      "en-GB": "Duck",
+      "nl-NL": "Eend",
+      "de-DE": "Ente",
+      "fr-FR": "Canard",
+      "it-IT": "Anatra",
+      "es-ES": "Pato",
+      "pt-PT": "Pato"
+   },
+   "masterVariant": {
+      "sku": "duck-yellow",
+      "key": "duck-yellow",
+      "prices": [
+         {
+            "value": {
+               "type": "centPrecision",
+               "currencyCode": "EUR",
+               "centAmount": 1000,
+               "fractionDigits": 2
+            },
+            "key": "eur-all"
+         },
+         {
+            "value": {
+               "type": "centPrecision",
+               "currencyCode": "GBP",
+               "centAmount": 1000,
+               "fractionDigits": 2
+            },
+            "key": "gbp-all"
+         }
+      ],
+      "images": [
+         {
+            "url": "https://demo-images.deno.dev/duck-yellow.jpeg",
+            "dimensions": {
+               "w": 1424,
+               "h": 1424
+            },
+            "label": "A yellow duck"
+         },
+         {
+            "url": "https://demo-images.deno.dev/duck-yellow-front.jpeg",
+            "dimensions": {
+               "w": 233,
+               "h": 233
+            },
+            "label": "A yellow duck coming right at you"
+         },
+         {
+            "url": "https://demo-images.deno.dev/duck-yellow-right-side.jpeg",
+            "dimensions": {
+               "w": 233,
+               "h": 233
+            },
+            "label": "A yellow duck swiming away to the right of the screen"
+         },
+         {
+            "url": "https://demo-images.deno.dev/duck-yellow-left-side.jpeg",
+            "dimensions": {
+               "w": 233,
+               "h": 233
+            },
+            "label": "A yellow duck swiming away to the left of the screen"
+         }
+      ],
+      "attributes": [
+         {
+            "name": "fp_color",
+            "value": "yellow"
+         }
+      ]
+   },
+   "variants": [
+      {
+         "sku": "duck-blue",
+         "key": "duck-blue",
+         "prices": [
+            {
+               "value": {
+                  "type": "centPrecision",
+                  "currencyCode": "EUR",
+                  "centAmount": 1000,
+                  "fractionDigits": 2
+               },
+               "key": "eur-all"
+            },
+            {
+               "value": {
+                  "type": "centPrecision",
+                  "currencyCode": "GBP",
+                  "centAmount": 1000,
+                  "fractionDigits": 2
+               },
+               "key": "gbp-all"
+            }
+         ],
+         "images": [
+            {
+               "url": "https://demo-images.deno.dev/duck-blue.jpeg",
+               "dimensions": {
+                  "w": 600,
+                  "h": 600
+               },
+               "label": "A blue duck"
+            }
+         ],
+         "attributes": [
+            {
+               "name": "fp_color",
+               "value": "blue"
+            }
+         ]
+      },
+      {
+         "sku": "duck-red",
+         "key": "duck-red",
+         "prices": [
+            {
+               "value": {
+                  "type": "centPrecision",
+                  "currencyCode": "EUR",
+                  "centAmount": 1000,
+                  "fractionDigits": 2
+               },
+               "key": "eur-all"
+            },
+            {
+               "value": {
+                  "type": "centPrecision",
+                  "currencyCode": "GBP",
+                  "centAmount": 1000,
+                  "fractionDigits": 2
+               },
+               "key": "gbp-all"
+            }
+         ],
+         "images": [
+            {
+               "url": "https://demo-images.deno.dev/duck-red.jpeg",
+               "dimensions": {
+                  "w": 600,
+                  "h": 600
+               },
+               "label": "A red duck"
+            }
+         ],
+         "attributes": [
+            {
+               "name": "fp_color",
+               "value":  "red"
+            }
+         ]
+
+      },
+      {
+         "sku": "duck-green",
+         "key": "duck-green",
+         "prices": [
+            {
+               "value": {
+                  "type": "centPrecision",
+                  "currencyCode": "EUR",
+                  "centAmount": 1000,
+                  "fractionDigits": 2
+               },
+               "key": "eur-all"
+            },
+            {
+               "value": {
+                  "type": "centPrecision",
+                  "currencyCode": "GBP",
+                  "centAmount": 1000,
+                  "fractionDigits": 2
+               },
+               "key": "gbp-all"
+            }
+         ],
+         "images": [
+            {
+               "url": "https://demo-images.deno.dev/duck-green.jpeg",
+               "dimensions": {
+                  "w": 600,
+                  "h": 600
+               },
+               "label": "A green duck"
+            }
+         ],
+         "attributes": [
+            {
+               "name": "fp_color",
+               "value":  "green"
+            }
+         ]
+
+      },
+      {
+         "sku": "duck-pink",
+         "key": "duck-pink",
+         "prices": [
+            {
+               "value": {
+                  "type": "centPrecision",
+                  "currencyCode": "EUR",
+                  "centAmount": 1000,
+                  "fractionDigits": 2
+               },
+               "key": "eur-all"
+            },
+            {
+               "value": {
+                  "type": "centPrecision",
+                  "currencyCode": "GBP",
+                  "centAmount": 1000,
+                  "fractionDigits": 2
+               },
+               "key": "gbp-all"
+            }
+         ],
+         "images": [
+            {
+               "url": "https://demo-images.deno.dev/duck-pink.jpeg",
+               "dimensions": {
+                  "w": 600,
+                  "h": 600
+               },
+               "label": "A pink duck"
+            }
+         ],
+         "attributes": [
+            {
+               "name": "fp_color",
+               "value":  "pink"
+            }
+         ]
+
+      },
+      {
+         "sku": "duck-orange",
+         "key": "duck-orange",
+         "prices": [
+            {
+               "value": {
+                  "type": "centPrecision",
+                  "currencyCode": "EUR",
+                  "centAmount": 1000,
+                  "fractionDigits": 2
+               },
+               "key": "eur-all"
+            },
+            {
+               "value": {
+                  "type": "centPrecision",
+                  "currencyCode": "GBP",
+                  "centAmount": 1000,
+                  "fractionDigits": 2
+               },
+               "key": "gbp-all"
+            }
+         ],
+         "images": [
+            {
+               "url": "https://demo-images.deno.dev/duck-orange.jpeg",
+               "dimensions": {
+                  "w": 600,
+                  "h": 600
+               },
+               "label": "An orange duck, must be a winner"
+            }
+         ],
+         "attributes": [
+            {
+               "name": "fp_color",
+               "value":  "orange"
+            }
+         ]
+      },
+      {
+         "sku": "duck-purple",
+         "key": "duck-purple",
+         "prices": [
+            {
+               "value": {
+                  "type": "centPrecision",
+                  "currencyCode": "EUR",
+                  "centAmount": 1000,
+                  "fractionDigits": 2
+               },
+               "key": "eur-all"
+            },
+            {
+               "value": {
+                  "type": "centPrecision",
+                  "currencyCode": "GBP",
+                  "centAmount": 1000,
+                  "fractionDigits": 2
+               },
+               "key": "gbp-all"
+            }
+         ],
+         "images": [
+            {
+               "url": "https://demo-images.deno.dev/duck-purple.jpeg",
+               "dimensions": {
+                  "w": 600,
+                  "h": 600
+               },
+               "label": "A purple duck"
+            }
+         ],
+         "attributes": [
+            {
+               "name": "fp_color",
+               "value":  "purple"
+            }
+         ]
+      }
+   ],
+   "key": "duck",
+   "taxCategory": {
+      "typeId": "tax-category",
+      "key": "standard"
+   }
+}
+]
