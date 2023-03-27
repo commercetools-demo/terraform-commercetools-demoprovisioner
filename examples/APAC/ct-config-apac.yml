@@ -328,46 +328,46 @@ shippingmethods:
       currency: "MYR"
       normal: 500
       free-above: 10000        
-  - method:
-    name: "VNPost"
-    tax-category: "standard"
-    predicate: ""
-    zones: 
-    - zone: 
-      key: "vietnam"
-      rates:
-      - rate:
-        currency: "VND"
-        normal: 40000
-        free-above: 1000000
-  - method:
-    name: "DHL"
-    tax-category: "standard"
-    predicate: ""
-    zones: 
-    - zone: 
-      key: "india"
-      rates:
-      - rate:
-        currency: "INR"
-        normal: 40000
-        free-above: 1000000
-    - zone: 
-      key: "malaysia"
-      rates:
-      - rate:
-        currency: "MYR"
-        normal: 400
-        free-above: 1000   
-  - method:
-    name: "GDEX"
-    tax-category: "standard"
-    predicate: ""
-    zones: 
-    - zone: 
-      key: "malaysia"
-      rates:
-      - rate:
-        currency: "MYR"
-        normal: 400
-        free-above: 1000     
+- method:
+  name: "VNPost"
+  tax-category: "standard"
+  predicate: ""
+  zones: 
+  - zone: 
+    key: "vietnam"
+    rates:
+    - rate:
+      currency: "VND"
+      normal: 40000
+      free-above: 1000000
+- method:
+  name: "DHL"
+  tax-category: "standard"
+  predicate: ""
+  zones: 
+  - zone: 
+    key: "india"
+    rates:
+    - rate:
+      currency: "INR"
+      normal: 40000
+      free-above: 1000000
+  - zone: 
+    key: "malaysia"
+    rates:
+    - rate:
+      currency: "MYR"
+      normal: 400
+      free-above: 1000   
+- method:
+  name: "GDEX"
+  tax-category: "standard"
+  predicate: ""
+  zones: 
+  - zone: 
+    key: "malaysia"
+    rates:
+    - rate:
+      currency: "MYR"
+      normal: 400
+      free-above: 1000     
