@@ -43,6 +43,7 @@ resource "commercetools_shipping_method" "shipping-method" {
    }]...)
    is_default      = (lower(each.value.name) == "standard") ? true : false
    tax_category_id = var.standardtax.id
+   predicate       = "${each.value.predicate}"
 }
 
 output "allmethods" {
