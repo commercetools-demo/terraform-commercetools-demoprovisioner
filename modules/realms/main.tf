@@ -1,13 +1,19 @@
-
 variable "configfile" {
    type = string
    description = "The file .yml that contains the configuration"
+}
+
+variable "envpath" {
+   type = string
+   description = "path to where the .env file fort this project can be found"
+   default = ".env"
 }
 
 # load the config from the default ct-config.yml file
 module "config" {
    source   = "../config"
    filename = var.configfile
+   envpath = var.envpath
 }
 
 module "Project" {

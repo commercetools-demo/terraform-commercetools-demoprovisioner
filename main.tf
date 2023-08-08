@@ -13,6 +13,12 @@ variable "configfile" {
   description = "The file .yml that contains the configuration"
 }
 
+variable "envpath" {
+  type = string
+  description = "path to where the .env file fort this project can be found"
+  default = ".env"
+}
+
 provider "commercetools" {
   client_id     = module.realms.config.client.client_id
   client_secret = module.realms.config.client.client_secret
@@ -22,11 +28,11 @@ provider "commercetools" {
   scopes        = module.realms.config.client.scopes
 }
 
-
 # setup all realms, realms will deal with channels stores etc
 module "realms" {
   source   = "./modules/realms"
   configfile = var.configfile
+  envpath = var.envpath
 }
 
 output "config" {
