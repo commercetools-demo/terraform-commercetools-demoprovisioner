@@ -5,8 +5,15 @@ variable "filename" {
    default = "ct-config.yml"
 }
 
+variable "envpath" {
+   type = string
+   description = "path to where the .env file fort this project can be found"
+   default = ".env"
+}
+
 module "client" {
    source   = "../client"
+   filename = var.envpath
 }
 
 locals {
