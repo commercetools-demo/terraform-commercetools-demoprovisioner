@@ -15,6 +15,7 @@ the ```main.tf``` file should look like this
 module "demoprovisioner" {
    source  = "commercetools-demo/demoprovisioner/commercetools"
    configfile = "./ct-config-emea.yml"
+   envpath = "./../.env"  /* path to .env file, defaults to .env */
 }
 
 # register the terraform provider, this needs to happen in the root module
